@@ -1,0 +1,8 @@
+type User @model @auth(rules: [{allow: public, operations: [read]}, {allow: private, operations: [read]}, {allow: groups, groups: ["Admin"], operations: [read, create, update, delete]}]) {
+  id: ID!
+  name: String
+  age: Int
+  mobile: String
+  email: AWSEmail
+}
+ 
